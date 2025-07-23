@@ -17,7 +17,7 @@ function showAll(productsArray) {
         <li class="item-price">
             <img src=${product.src} alt="">
             <h3>${product.name}</h3>
-            <p>R$ ${formatCurrency(product.price)}</p>
+            <p>${formatCurrency(product.price)}</p>
         </li>`
     })
     list.innerHTML = myLi
@@ -42,7 +42,7 @@ function reduceAll() {
     const total = menuOptions.reduce((acc, curr) => acc + curr.price, 0)
     list.innerHTML =
         `<li class="item-price"> 
-            <p>O valor total <br> dos itens é: <br> R$ ${formatCurrency(total)}</p>
+            <p>O valor total <br> dos itens é: <br> ${formatCurrency(total)}</p>
         </li>`
 }
 
